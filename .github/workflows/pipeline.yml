@@ -1,0 +1,21 @@
+# Nome do Workflow
+name: DevOpsLab Pipeline
+
+# Evento que irá acionar a pipeline
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        run: mkdir teste_gicele
